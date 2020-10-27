@@ -124,13 +124,6 @@ URL = {https://doi.org/10.1177/1094342011428142},
 eprint = {https://doi.org/10.1177/1094342011428142},
 abstract = { The Community Atmosphere Model (CAM) version 5 includes a spectral element dynamical core option from NCAR’s High-Order Method Modeling Environment. It is a continuous Galerkin spectral finite-element method designed for fully unstructured quadrilateral meshes. The current configurations in CAM are based on the cubed-sphere grid. The main motivation for including a spectral element dynamical core is to improve the scalability of CAM by allowing quasi-uniform grids for the sphere that do not require polar filters. In addition, the approach provides other state-of-the-art capabilities such as improved conservation properties. Spectral elements are used for the horizontal discretization, while most other aspects of the dynamical core are a hybrid of well-tested techniques from CAM’s finite volume and global spectral dynamical core options. Here we first give an overview of the spectral element dynamical core as used in CAM. We then give scalability and performance results from CAM running with three different dynamical core options within the Community Earth System Model, using a pre-industrial time-slice configuration. We focus on high-resolution simulations, using 1/4 degree, 1/8 degree, and T341 spectral truncation horizontal grids. }
 }
-@book{RJL-FDM,
-author = {Randall J LeVeque},
-title = {Finite Difference Methods for Ordinary and Partial Differential Equations: Steady State and Time Dependent Problems},
-publisher = {Society for Industrial and Applied Mathematics},
-year = 2007,
-isbn = {9780898716290}
-}
 @article{Morrison2008,
 author = {Morrison, Hugh and Gettelman, Andrew},
 title = {A New Two-Moment Bulk Stratiform Cloud Microphysics Scheme in the {Community Atmosphere Model}, Version 3 ({CAM3}). Part I: Description and Numerical Tests},
@@ -249,7 +242,7 @@ eprint = {https://doi.org/10.1175/2008JCLI2116.1},
 	number = {15},
 	doi = {10.3929/ethz-b-000109439},
 	address = {Göttingen},
-	abstract = {A new parameterization with three prognostic liquid water classes was implemented into the general circulation model (GCM) ECHAM5 with the aerosol module HAM in order to improve the global representation of rain formation in marine stratiform clouds. The additionally introduced drizzle class improves the physical representation of the droplet spectrum and, more importantly, improves the microphysical processes relevant for precipitation formation compared to the standard parameterization. In order to avoid a mismatch of the liquid and ice phase, a prognostic treatment of snow has been introduced too. This has a significant effect on the amount and altitude of ice clouds, which in turn affects not only the in- and outgoing radiation but also the parameterized collection rates. With the introduction of a prognostic precipitation scheme, a more realistic representation of both liquid and ice phase large-scale precipitation is achieved compared to a diagnostic treatment. An encouraging finding is that with the prognostic treatment the increase of the liquid water path in response to anthropogenic aerosols is reduced by about 25 %. Although the total net radiative forcing is decreased from −1.3±0.3 to −1.6±0.3 W m−2 from the control to the prognostic model version, the difference is within the interannual variability. Altogether the results suggest that the treatment of precipitation in global circulation models has not only a significant influence on the phase of clouds and their conversion rates, but also hints towards uncertainties related to a prognostic precipitation scheme.},
+	abstract = {A new parameterization with three prognostic liquid water classes was implemented into the general circulation model (GCM) ECHAM5 with the aerosol module HAM in order to improve the global representation of rain formation in marine stratiform clouds. The additionally introduced drizzle class improves the physical representation of the droplet spectrum and, more importantly, improves the microphysical processes relevant for precipitation formation compared to the standard parameterization. In order to avoid a mismatch of the liquid and ice phase, a prognostic treatment of snow has been introduced too. This has a significant effect on the amount and altitude of ice clouds, which in turn affects not only the in- and outgoing radiation but also the parameterized collection rates. With the introduction of a prognostic precipitation scheme, a more realistic representation of both liquid and ice phase large-scale precipitation is achieved compared to a diagnostic treatment. An encouraging finding is that with the prognostic treatment the increase of the liquid water path in response to anthropogenic aerosols is reduced by about 25 \%. Although the total net radiative forcing is decreased from −1.3±0.3 to −1.6±0.3 W m−2 from the control to the prognostic model version, the difference is within the interannual variability. Altogether the results suggest that the treatment of precipitation in global circulation models has not only a significant influence on the phase of clouds and their conversion rates, but also hints towards uncertainties related to a prognostic precipitation scheme.},
 	title = {Prognostic precipitation with three liquid water classes in the {ECHAM5-HAM} {GCM}},
 	PAGES = {8717 - 8738}
 }
@@ -522,4 +515,63 @@ eprint = {https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2019MS001972},
 note = {e2019MS001972 10.1029/2019MS001972},
 abstract = {Abstract Climate models rely on parameterizations of a variety of processes in the atmospheric physics, but a common concern is that the temporal resolution is too coarse to consistently resolve the behavior that individual parameterizations are designed to capture. This study examines timescales numerically derived from the Morrison-Gettelman (MG2) microphysics as implemented within the Energy Exascale Earth System Model, version 1 (E3SMv1). Numerically relevant timescales in MG2 are derived by computing the eigenspectrum of its Jacobian. These timescales are found to often be smaller than the default 5 min time step used for MG2. The fast timescales are then heuristically connected to individual microphysics processes. By substepping a few particular rain processes within MG2, the time discretization error for those processes was considerably reduced with minimal additional expense to the overall microphysics. While this improvement has a substantial effect on the target processes and on the vertical distribution of stratiform-derived rain within E3SMv1, the overall model climate is found to not be sensitive to MG2 time step. We hypothesize that this is because the surface climate does not depend strongly on certain process rates, especially MG2's rain evaporation rate.},
 year = {2020}
+}
+@article{Santos2020b,
+author = {Santos, Sean Patrick and Caldwell, Peter M. and Bretherton, Christopher S.},
+title = {Cloud Process Coupling and Time Integration in the E3SM Atmosphere Model},
+journal = {Journal of Advances in Modeling Earth Systems},
+url = {https://drive.google.com/file/d/1EN1u8FcnuOHcPA-N6RlzFVmNenAVKPQ0/view?usp=sharing},
+note = {Submitted, currently in review.},
+abstract = {Abstract In this study, we find significant sensitivity to the choice of time step for the Energy Exascale Earth System Model's atmospheric component, leading to large decreases in the magnitude of cloud forcing when the time step is reduced to 10 seconds. Reducing the time step size for the microphysics increases precipitation, leading to a drying of the atmosphere and an increase in surface evaporation. This effect is amplified when the microphysics is substepped together with other cloud physics processes. Coupling the model's dynamics and physics more frequently reduces cloud fraction at lower altitudes, while producing more cloud liquid at higher altitudes. Reducing the deep convection time step also reduces low cloud mass and cloud fraction. Together, these results suggest that cloud physics in a global circulation model can depend strongly on time step, and in particular on the frequency with which cloud-related processes are coupled with each other and with the model dynamics.},
+year = {2020}
+}
+@article{Andrews2012,
+author = {Andrews, Timothy and Gregory, Jonathan M. and Webb, Mark J. and Taylor, Karl E.},
+title = {Forcing, feedbacks and climate sensitivity in CMIP5 coupled atmosphere-ocean climate models},
+journal = {Geophysical Research Letters},
+volume = {39},
+number = {9},
+pages = {},
+keywords = {AOGCMs, CMIP5, climate feedbacks, climate sensitivity, radiative forcing},
+doi = {10.1029/2012GL051607},
+url = {https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2012GL051607},
+eprint = {https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2012GL051607},
+abstract = {We quantify forcing and feedbacks across available CMIP5 coupled atmosphere-ocean general circulation models (AOGCMs) by analysing simulations forced by an abrupt quadrupling of atmospheric carbon dioxide concentration. This is the first application of the linear forcing-feedback regression analysis of Gregory et al. (2004) to an ensemble of AOGCMs. The range of equilibrium climate sensitivity is 2.1–4.7 K. Differences in cloud feedbacks continue to be important contributors to this range. Some models show small deviations from a linear dependence of top-of-atmosphere radiative fluxes on global surface temperature change. We show that this phenomenon largely arises from shortwave cloud radiative effects over the ocean and is consistent with independent estimates of forcing using fixed sea-surface temperature methods. We suggest that future research should focus more on understanding transient climate change, including any time-scale dependence of the forcing and/or feedback, rather than on the equilibrium response to large instantaneous forcing.},
+year = {2012}
+}
+@article{Zelinka2020,
+author = {Zelinka, Mark D. and Myers, Timothy A. and McCoy, Daniel T. and Po-Chedley, Stephen and Caldwell, Peter M. and Ceppi, Paulo and Klein, Stephen A. and Taylor, Karl E.},
+title = {Causes of Higher Climate Sensitivity in CMIP6 Models},
+journal = {Geophysical Research Letters},
+volume = {47},
+number = {1},
+pages = {e2019GL085782},
+doi = {10.1029/2019GL085782},
+url = {https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2019GL085782},
+eprint = {https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2019GL085782},
+note = {e2019GL085782 10.1029/2019GL085782},
+abstract = {Abstract Equilibrium climate sensitivity, the global surface temperature response to CO doubling, has been persistently uncertain. Recent consensus places it likely within 1.5–4.5 K. Global climate models (GCMs), which attempt to represent all relevant physical processes, provide the most direct means of estimating climate sensitivity via CO quadrupling experiments. Here we show that the closely related effective climate sensitivity has increased substantially in Coupled Model Intercomparison Project phase 6 (CMIP6), with values spanning 1.8–5.6 K across 27 GCMs and exceeding 4.5 K in 10 of them. This (statistically insignificant) increase is primarily due to stronger positive cloud feedbacks from decreasing extratropical low cloud coverage and albedo. Both of these are tied to the physical representation of clouds which in CMIP6 models lead to weaker responses of extratropical low cloud cover and water content to unforced variations in surface temperature. Establishing the plausibility of these higher sensitivity models is imperative given their implied societal ramifications.},
+year = {2020}
+}
+@article{Bony2005,
+author = {Bony, Sandrine and Dufresne, Jean-Louis},
+title = {Marine boundary layer clouds at the heart of tropical cloud feedback uncertainties in climate models},
+journal = {Geophysical Research Letters},
+volume = {32},
+number = {20},
+pages = {},
+doi = {10.1029/2005GL023851},
+url = {https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2005GL023851},
+eprint = {https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2005GL023851},
+abstract = {The radiative response of tropical clouds to global warming exhibits a large spread among climate models, and this constitutes a major source of uncertainty for climate sensitivity estimates. To better interpret the origin of that uncertainty, we analyze the sensitivity of the tropical cloud radiative forcing to a change in sea surface temperature that is simulated by 15 coupled models simulating climate change and current interannual variability. We show that it is in regimes of large-scale subsidence that the model results (1) differ the most in climate change and (2) disagree the most with observations in the current climate (most models underestimate the interannual sensitivity of clouds albedo to a change in temperature). This suggests that the simulation of the sensitivity of marine boundary layer clouds to changing environmental conditions constitutes, currently, the main source of uncertainty in tropical cloud feedbacks simulated by general circulation models.},
+year = {2005}
+}
+@article{Wan2020,
+      title={Quantifying and attributing time step sensitivities in present-day climate simulations conducted with EAMv1 (preprint)}, 
+      author={Hui Wan and Shixuan Zhang and Philip J. Rasch and Vincent E. Larson and Xubin Zeng and Huiping Yan},
+      year={2020},
+      url = {https://arxiv.org/abs/2010.07479v1},
+      eprint={2010.07479},
+      archivePrefix={arXiv},
+      primaryClass={physics.ao-ph}
 }
